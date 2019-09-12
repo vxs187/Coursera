@@ -1,32 +1,17 @@
-/******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
- *
- * Redistribution, modification or use of this software in source or binary
- * forms is permitted as long as the files maintain this copyright. Users are 
- * permitted to modify this and use it to learn about the field of embedded
- * software. Alex Fosdick and the University of Colorado are not liable for any
- * misuse of this material. 
- *
- *****************************************************************************/
-/**
- * @file stats.c 
- * @brief C-script for statistics calculation. 
- *
- * C-script used for calculating and printing the required
- * statistical information that have been asked on the problem description. 
- *
- * @author Visweshwar Srinivasan
- * @date Sep 12 2019
- *
- */
-
-
-
 #include <stdio.h>
 #include "stats.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
+
+unsigned char find_minimum(unsigned char *);
+unsigned char find_minimum_index(unsigned char *);
+unsigned char find_maximum(unsigned char *);
+unsigned char find_mean(unsigned char *);
+unsigned char find_median(unsigned char *);
+unsigned char sort_array(unsigned char *,unsigned char *);
+void print_array(unsigned char *);
+void print_statistics(unsigned char *);
 
 void main() {
 
@@ -35,18 +20,13 @@ void main() {
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
-
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
-  print_array(test);
-  unsigned char out[SIZE] = {};
-  print_statistics(test);
-  *out = sort_array(test,out);
-  printf("After ordering, ");
-  print_array(out);
+    print_array(test);
+    unsigned char out[SIZE] = {};
+    print_statistics(test);
+    *out = sort_array(test,out);
+    printf("After ordering, ");
+    print_array(out);
 }
-
-/* Add other Implementation File Code Here */
 
 void print_statistics(unsigned char *test){
     printf("Minimum: %d\n",find_minimum(test));

@@ -9,32 +9,101 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Header file for stats.c which contains the main function
  *
- * <Add Extended Description Here>
+ * This header file provides an abstraction of calculations and 
+ * printing functions via function calls. 
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Visweshwar Srinivasan
+ * @date Sep 12 2019
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+/**
+ * @brief Finds minimum in the given array 
+ *
+ * Given a pointer to a char data set, this will give the minimum
+ * value of the data set as output.
+ *
+ * @param ptr Pointer to data array
+ *
+ * @return void.
+ */
+unsigned char find_minimum(unsigned char *ptr);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Finds maximum in the given array 
  *
- * <Add Extended Description Here>
+ * Given a pointer to a char data set, this will give the maximum
+ * value of the data set as output.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param ptr Pointer to data array
  *
- * @return <Add Return Informaiton here>
+ * @return void.
  */
+ unsigned char find_maximum(unsigned char *);
 
+/**
+ * @brief Finds minimum in the given array 
+ *
+ * Given a pointer to a char data set, this will give the mean
+ * value of the data set as output.
+ *
+ * @param ptr Pointer to data array
+ *
+ * @return void.
+ */
+unsigned char find_mean(unsigned char *);
+
+/**
+ * @brief Finds minimum in the given array 
+ *
+ * Given a pointer to a char data set, this will give the median
+ * value of the data set as output.
+ *
+ * @param ptr Pointer to data array
+ *
+ * @return void.
+ */
+unsigned char find_median(unsigned char *);
+
+/**
+ * @brief Finds minimum in the given array 
+ *
+ * Given a pointer to a char data set, this will give the sorted
+ * array of the data set as output.
+ *
+ * @param ptr Pointer to data array
+ *
+ * @return void.
+ */
+unsigned char sort_array(unsigned char *,unsigned char *);
+
+/**
+ * @brief Sets a value of a data array 
+ *
+ * Given a pointer to a char data set, this will print the provided
+ * data set values on the output window.
+ *
+ * @param ptr Pointer to data array
+ *
+ * @return void.
+ */
+void print_array(unsigned char *);
+
+/**
+ * @brief Sets a value of a data array 
+ *
+ * Given a pointer to a char data set, this will print the stats
+ * of the data set provided.
+ *
+ * @param ptr Pointer to data array
+ *
+ * @return void.
+ */
+void print_statistics(unsigned char *);
 
 #endif /* __STATS_H__ */
